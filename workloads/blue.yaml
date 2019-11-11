@@ -13,6 +13,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: blue-web
+  namespace: demo
+  labels:
+    app: blue
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   replicas: 1
   selector:
